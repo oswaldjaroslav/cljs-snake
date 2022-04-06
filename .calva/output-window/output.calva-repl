@@ -100,3 +100,15 @@ cljs꞉cljs-snake.utils꞉> 
 ; Evaluating file: snake.cljs
 []
 cljs꞉cljs-snake.snake꞉> 
+#'cljs-snake.snake/scale-x
+cljs꞉cljs-snake.snake꞉> 
+30
+cljs꞉cljs-snake.snake꞉> 
+60
+cljs꞉cljs-snake.snake꞉> 
+90
+cljs꞉cljs-snake.snake꞉> 
+##Inf
+cljs꞉cljs-snake.snake꞉> 
+#'cljs-snake.snake/state_
+cljs꞉cljs-snake.snake꞉> 

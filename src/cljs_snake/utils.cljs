@@ -5,9 +5,13 @@
   (map #(vector (name %1) %2) (keys obj) (vals obj)))
 
 (defn setup-canvas [container-id attributes]
-  (let [canvas (.createElement js/document "canvas")
-        container (.getElementById js/document container-id)]
-    (doseq [[name value] (entries attributes)]
-      (.setAttribute canvas name value))
-    (.appendChild container canvas)
-    (.getContext canvas "2d")))
+  (let [canvas (.getElementById js/document (:id attributes))]
+    (if canvas
+      (.getContext canvas "2d")
+      (let [canvas (.createElement js/document "canvas")
+            container (.getElementById js/document container-id)]
+        (doseq [[name value] (entries attributes)]
+          (.setAttribute canvas name value))
+        (.appendChild container canvas)
+        (.getContext canvas "2d"))))
+  )
