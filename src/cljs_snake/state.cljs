@@ -1,5 +1,6 @@
 (ns cljs-snake.state
   (:require
+   [cljs-snake.utils :refer [get-random-apple]]
    [cljs-snake.attributes :refer [attributes]]))
 
 (def state_ (atom {:apple {:x 7 :y 2}
@@ -12,23 +13,39 @@
     (= 0 (+ (:x old-move) (:x next-move)))
     (= 0 (+ (:y old-move) (:y next-move))))))
 
+(defn is-eating-apple? [head apple]
+  (= head apple))
+
 (defn register-move [move]
   (when (is-move-valid? move @state_)
     (swap! state_ update-in [:moves] concat (list move))))
 
-(defn update-apple [{apple :apple}] apple)
-
-(defn update-snake [{snake :snake moves :moves}]
+(defn create-future-head [{snake :snake moves :moves}]
   (let [move (first moves)
         current-head (first snake)
-        next-x (+ (:x move) (:x current-head))
-        next-y (+ (:y move) (:y current-head))
-        new-head {:x next-x
-                  :y next-y}]
-    (->>
+        x (+ (:x move) (:x current-head))
+        y (+ (:y move) (:y current-head))]
+    {:x (cond
+          (= x -1) (- (:col attributes) 1)
+          (= x (:col attributes)) 0
+          :else x)
+     :y (cond
+          (= y -1) (- (:row attributes) 1)
+          (= y (:row attributes)) 0
+          :else y)}))
+
+(defn update-apple [future-head {apple :apple}]
+  (if (= apple future-head)
+    (get-random-apple)
+    apple))
+
+(defn update-snake [future-head {snake :snake apple :apple}]
+  (->>
+   (if (is-eating-apple? future-head apple)
      snake
-     (concat (list new-head))
-     (drop-last))))
+     (drop-last snake))
+   (concat
+    (list future-head))))
 
 
 (defn update-moves [{moves :moves}]
@@ -37,6 +54,7 @@
     moves))
 
 (defn compute-next-state [old-state]
-  {:apple (update-apple old-state)
-   :snake (update-snake old-state)
-   :moves (update-moves old-state)})
+  (let [future-head (create-future-head old-state)]
+    {:apple (update-apple future-head old-state)
+     :snake (update-snake future-head old-state)
+     :moves (update-moves old-state)}))

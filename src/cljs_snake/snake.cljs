@@ -2,7 +2,7 @@
   (:require
    [cljs-snake.attributes :refer [attributes]]
    [cljs-snake.state :refer [state_ register-move compute-next-state]]
-   [cljs-snake.utils :refer [setup-canvas]]))
+   [cljs-snake.utils :refer [setup-canvas scale-x scale-y]]))
 
 
 (def theme {:bg-color "#232323"
@@ -11,11 +11,6 @@
 
 
 (def ctx (setup-canvas "app" attributes))
-
-(defn scale-x [x]
-  (.round js/Math (* x (/ (:width attributes) (:col attributes)))))
-(defn scale-y [y]
-  (.round js/Math (* y (/ (:height attributes) (:row attributes)))))
 
 
 (defn draw []
@@ -46,7 +41,7 @@
 
 (defn step [t1]
   (fn [t2]
-    (if (> (- t2 t1) 1000)
+    (if (> (- t2 t1) 100)
       (do
         (swap! state_ compute-next-state)
         (draw)

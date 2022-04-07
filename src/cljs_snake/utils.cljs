@@ -1,5 +1,15 @@
-(ns cljs-snake.utils)
+(ns cljs-snake.utils
+  (:require
+   [cljs-snake.attributes :refer [attributes]]))
 
+(defn scale-x [x]
+  (.round js/Math (* x (/ (:width attributes) (:col attributes)))))
+(defn scale-y [y]
+  (.round js/Math (* y (/ (:height attributes) (:row attributes)))))
+
+(defn get-random-apple []
+  {:x (.floor js/Math (rand (:col attributes)))
+   :y (.floor js/Math (rand (:row attributes)))})
 
 (defn entries [obj]
   (map #(vector (name %1) %2) (keys obj) (vals obj)))
@@ -13,5 +23,4 @@
         (doseq [[name value] (entries attributes)]
           (.setAttribute canvas name value))
         (.appendChild container canvas)
-        (.getContext canvas "2d"))))
-  )
+        (.getContext canvas "2d")))))
