@@ -1,7 +1,10 @@
 (ns cljs-snake.snake
   (:require
    [cljs-snake.attributes :refer [attributes]]
-   [cljs-snake.state :refer [state_ register-move compute-next-state]]
+   [cljs-snake.state :refer [state_ 
+                             register-move 
+                             compute-next-state 
+                             get-initial-state]]
    [cljs-snake.utils :refer [setup-canvas scale-x scale-y]]))
 
 
@@ -39,13 +42,21 @@
                (scale-x 1)
                (scale-y 1))))
 
+(defn display-game-result [run-game]
+  (js/alert "GAME OVER")
+  (js/setTimeout #(do 
+                    (reset! state_ (get-initial-state))
+                    ((run-game 0) 0)) 500))
+
 (defn step [t1]
   (fn [t2]
     (if (> (- t2 t1) 100)
-      (do
-        (swap! state_ compute-next-state)
-        (draw)
-        (.requestAnimationFrame js/window (step t2)))
+      (if (:game-over @state_)
+        (display-game-result step)
+        (do
+          (swap! state_ compute-next-state)
+          (draw)
+          (.requestAnimationFrame js/window (step t2))))
       (.requestAnimationFrame js/window (step t1)))))
 
 

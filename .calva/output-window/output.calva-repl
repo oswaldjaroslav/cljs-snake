@@ -221,3 +221,53 @@ cljs꞉cljs-snake.utils꞉> 
 ; Evaluating file: snake.cljs
 []
 cljs꞉cljs-snake.snake꞉> 
+{:apple {:x 7, :y 2}, :snake ({:x 6, :y 1}), :velocity nil}
+cljs꞉cljs-snake.state꞉> 
+{:x 7, :y 8}
+
+nil
+cljs꞉cljs-snake.state꞉> 
+nil
+cljs꞉cljs-snake.state꞉> 
+#'cljs-snake.state/state_
+cljs꞉cljs-snake.state꞉> 
+nil
+cljs꞉cljs-snake.state꞉> 
+{:x 7, :y 2}
+
+nil
+cljs꞉cljs-snake.state꞉> 
+{:x 7, :y 2}
+
+nil
+cljs꞉cljs-snake.state꞉> 
+nil
+cljs꞉cljs-snake.state꞉> 
+nil
+cljs꞉cljs-snake.state꞉> 
+nil
+cljs꞉cljs-snake.state꞉> 
+nil
+cljs꞉cljs-snake.state꞉> 
+nil
+cljs꞉cljs-snake.state꞉> 
+nil
+cljs꞉cljs-snake.state꞉> 
+#'cljs-snake.state/state_
+cljs꞉cljs-snake.state꞉> 
+true
+cljs꞉cljs-snake.state꞉> 
+true
+cljs꞉cljs-snake.state꞉> 
+true
+cljs꞉cljs-snake.state꞉> 
+nil
+cljs꞉cljs-snake.state꞉> 
+nil
+cljs꞉cljs-snake.state꞉> 
+#'cljs-snake.state/is-coliding-with-snake
+cljs꞉cljs-snake.state꞉> 
+nil
+cljs꞉cljs-snake.state꞉> 
+true
+cljs꞉cljs-snake.state꞉> 

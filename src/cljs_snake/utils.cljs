@@ -7,10 +7,6 @@
 (defn scale-y [y]
   (.round js/Math (* y (/ (:height attributes) (:row attributes)))))
 
-(defn get-random-apple []
-  {:x (.floor js/Math (rand (:col attributes)))
-   :y (.floor js/Math (rand (:row attributes)))})
-
 (defn entries [obj]
   (map #(vector (name %1) %2) (keys obj) (vals obj)))
 
