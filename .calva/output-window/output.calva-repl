@@ -25,337 +25,92 @@ clj꞉shadow.user꞉>  ; Use `alt+enter` to evaluate
 ;    (There is a button in the status bar for this)
 ; Jack-in done.
 cljs꞉cljs.user꞉>  ; Use `alt+enter` to evaluate
-nil
-; ------ WARNING - :undeclared-var -----------------------------------------------
-;  Resource: <eval>:1:7
- Use of undeclared Var cljs-snake.snake/attributes
---------------------------------------------------------------------------------
-
-clj꞉cljs-snake.snake꞉> 
-nil
-; ------ WARNING - :undeclared-var -----------------------------------------------
-;  Resource: <eval>:1:7
- Use of undeclared Var cljs-snake.snake/attributes
---------------------------------------------------------------------------------
-
-cljs꞉cljs-snake.snake꞉> 
-#'cljs-snake.snake/attributes
-cljs꞉cljs-snake.snake꞉> 
-(:width :height :id)
-cljs꞉cljs-snake.snake꞉> 
-nil
-; ------ WARNING - :undeclared-var -----------------------------------------------
-;  Resource: <eval>:1:2
- Use of undeclared Var cljs-snake.snake/doc
---------------------------------------------------------------------------------
-
-cljs꞉cljs-snake.snake꞉> 
-#'cljs-snake.snake/entries
-cljs꞉cljs-snake.snake꞉> 
-(["width" 600] ["height" 600] ["id" "snake canvas"])
-cljs꞉cljs-snake.snake꞉> 
-nil
-cljs꞉cljs-snake.snake꞉> 
-#'cljs-snake.snake/setup-canvas
-cljs꞉cljs-snake.snake꞉> 
-#'cljs-snake.snake/ctx
-cljs꞉cljs-snake.snake꞉> 
-nil
-cljs꞉cljs-snake.snake꞉> 
-nil
-cljs꞉cljs-snake.snake꞉> 
-nil
-cljs꞉cljs-snake.snake꞉> 
-#'cljs-snake.snake/ctx
-cljs꞉cljs-snake.snake꞉> 
-#object[HTMLCanvasElement [object HTMLCanvasElement]]
-cljs꞉cljs-snake.snake꞉> 
-#object[CanvasRenderingContext2D [object CanvasRenderingContext2D]]
-cljs꞉cljs-snake.snake꞉> 
-#'cljs-snake.snake/setup-canvas
-cljs꞉cljs-snake.snake꞉> 
-#'cljs-snake.snake/ctx
-cljs꞉cljs-snake.snake꞉> 
-#object[CanvasRenderingContext2D [object CanvasRenderingContext2D]]
-cljs꞉cljs-snake.snake꞉> 
-#object[CanvasRenderingContext2D [object CanvasRenderingContext2D]]
-cljs꞉cljs-snake.snake꞉> 
-#object[CanvasRenderingContext2D [object CanvasRenderingContext2D]]
-cljs꞉cljs-snake.snake꞉> 
-#object[CanvasRenderingContext2D [object CanvasRenderingContext2D]]
-cljs꞉cljs-snake.snake꞉> 
-#object[CanvasRenderingContext2D [object CanvasRenderingContext2D]]
-cljs꞉cljs-snake.snake꞉> 
-#object[CanvasRenderingContext2D [object CanvasRenderingContext2D]]
-cljs꞉cljs-snake.snake꞉> 
-#object[CanvasRenderingContext2D [object CanvasRenderingContext2D]]
-cljs꞉cljs-snake.snake꞉> 
-#object[CanvasRenderingContext2D [object CanvasRenderingContext2D]]
-cljs꞉cljs-snake.snake꞉> 
-#object[CanvasRenderingContext2D [object CanvasRenderingContext2D]]
-cljs꞉cljs-snake.snake꞉> 
-; Evaluating file: utils.cljs
-[]
-cljs꞉cljs-snake.utils꞉> 
 ; Evaluating file: snake.cljs
-[]
-cljs꞉cljs-snake.snake꞉> 
-#'cljs-snake.snake/scale-x
-cljs꞉cljs-snake.snake꞉> 
-30
-cljs꞉cljs-snake.snake꞉> 
-60
-cljs꞉cljs-snake.snake꞉> 
-90
-cljs꞉cljs-snake.snake꞉> 
-##Inf
-cljs꞉cljs-snake.snake꞉> 
-#'cljs-snake.snake/state_
-cljs꞉cljs-snake.snake꞉> 
-#'cljs-snake.snake/register-move
-cljs꞉cljs-snake.snake꞉> 
-#'cljs-snake.snake/state_
-cljs꞉cljs-snake.snake꞉> 
-{:apple {:x 7, :y 2}, :snake [{:x 1, :y 1}], :moves []}
-cljs꞉cljs-snake.snake꞉> 
-[]
-cljs꞉cljs-snake.snake꞉> 
-{:apple {:x 7, :y 2}, :snake [{:x 1, :y 1}], :moves [{:x 5, :y 5}]}
-cljs꞉cljs-snake.snake꞉> 
-[{:x 5, :y 5}]
-cljs꞉cljs-snake.snake꞉> 
-[{:x 5, :y 5}]
-cljs꞉cljs-snake.snake꞉> 
-{:apple {:x 7, :y 2}, :snake [{:x 1, :y 1}], :moves [{:x 5, :y 5} {:x 1, :y 1}]}
-cljs꞉cljs-snake.snake꞉> 
-[{:x 5, :y 5} {:x 1, :y 1}]
-cljs꞉cljs-snake.snake꞉> 
-#'cljs-snake.snake/state_
-cljs꞉cljs-snake.snake꞉> 
-[]
-cljs꞉cljs-snake.snake꞉> 
-#'cljs-snake.snake/register-move
-cljs꞉cljs-snake.snake꞉> 
-{:apple {:x 7, :y 2}, :snake [{:x 1, :y 1}], :moves [[:x 1] [:y 1]]}
-cljs꞉cljs-snake.snake꞉> 
-[[:x 1] [:y 1]]
-cljs꞉cljs-snake.snake꞉> 
-#'cljs-snake.snake/state_
-cljs꞉cljs-snake.snake꞉> 
-[]
-cljs꞉cljs-snake.snake꞉> 
-#'cljs-snake.snake/register-move
-cljs꞉cljs-snake.snake꞉> 
-{:apple {:x 7, :y 2}, :snake [{:x 1, :y 1}], :moves ([:x 1] [:y 1])}
-cljs꞉cljs-snake.snake꞉> 
-([:x 1] [:y 1])
-cljs꞉cljs-snake.snake꞉> 
-#'cljs-snake.snake/state_
-cljs꞉cljs-snake.snake꞉> 
-[]
-cljs꞉cljs-snake.snake꞉> 
-#'cljs-snake.snake/register-move
-cljs꞉cljs-snake.snake꞉> 
-{:apple {:x 7, :y 2}, :snake [{:x 1, :y 1}], :moves ({:x 1, :y 1})}
-cljs꞉cljs-snake.snake꞉> 
-({:x 1, :y 1})
-cljs꞉cljs-snake.snake꞉> 
-{:apple {:x 7, :y 2}, :snake [{:x 1, :y 1}], :moves ({:x 1, :y 1} {:x 2, :y 4})}
-cljs꞉cljs-snake.snake꞉> 
-({:x 1, :y 1} {:x 2, :y 4})
-cljs꞉cljs-snake.snake꞉> 
-#'cljs-snake.snake/state_
-cljs꞉cljs-snake.snake꞉> 
-#'cljs-snake.snake/register-move
-cljs꞉cljs-snake.snake꞉> 
-{:apple {:x 7, :y 2}, :snake [{:x 1, :y 1}], :moves [[{:x 2, :y 4}]]}
-cljs꞉cljs-snake.snake꞉> 
-[[{:x 2, :y 4}]]
-cljs꞉cljs-snake.snake꞉> 
-#'cljs-snake.snake/state_
-cljs꞉cljs-snake.snake꞉> 
-#'cljs-snake.snake/register-move
-cljs꞉cljs-snake.snake꞉> 
-[]
-cljs꞉cljs-snake.snake꞉> 
-{:apple {:x 7, :y 2}, :snake [{:x 1, :y 1}], :moves [{:x 2, :y 4}]}
-cljs꞉cljs-snake.snake꞉> 
-[{:x 2, :y 4}]
-cljs꞉cljs-snake.snake꞉> 
-{:apple {:x 7, :y 2}, :snake [{:x 1, :y 1}], :moves [{:x 2, :y 4} {:x 1, :y 1}]}
-cljs꞉cljs-snake.snake꞉> 
-[{:x 2, :y 4} {:x 1, :y 1}]
-cljs꞉cljs-snake.snake꞉> 
-#'cljs-snake.snake/directions
-cljs꞉cljs-snake.snake꞉> 
+; No available JS runtime.
+; See https://shadow-cljs.github.io/docs/UsersGuide.html#repl-troubleshooting
 nil
-cljs꞉cljs-snake.snake꞉> 
-nil
-cljs꞉cljs-snake.snake꞉> 
-nil
-cljs꞉cljs-snake.snake꞉> 
-nil
-cljs꞉cljs-snake.snake꞉> 
-nil
-cljs꞉cljs-snake.snake꞉> 
-nil
-cljs꞉cljs-snake.snake꞉> 
-nil
-cljs꞉cljs-snake.snake꞉> 
-nil
-cljs꞉cljs-snake.snake꞉> 
-nil
-cljs꞉cljs-snake.snake꞉> 
-; Evaluating file: snake.cljs
-[]
-cljs꞉cljs-snake.snake꞉> 
-[{:x -1, :y 0} {:x 0, :y -1} {:x 1, :y 0} {:x 0, :y 1}]
-cljs꞉cljs-snake.snake꞉> 
-nil
-; ------ WARNING - :redef --------------------------------------------------------
-;  Resource: <eval>:1:1
- test already refers to: cljs.core/test being replaced by: cljs-snake.snake/test
---------------------------------------------------------------------------------
-
-cljs꞉cljs-snake.snake꞉> 
-nil
-cljs꞉cljs-snake.snake꞉> 
-nil
-cljs꞉cljs-snake.snake꞉> 
-#'cljs-snake.snake/test
-cljs꞉cljs-snake.snake꞉> 
-#'cljs-snake.snake/test-snake
-cljs꞉cljs-snake.snake꞉> 
-[{:x 1, :y 1}]
-cljs꞉cljs-snake.snake꞉> 
-({:x 2, :y 2} {:x 1, :y 1})
-cljs꞉cljs-snake.snake꞉> 
-[{:x 2, :y 2} [{:x 1, :y 1}]]
-cljs꞉cljs-snake.snake꞉> 
-[{:x 1, :y 1} [{:x 2, :y 2}]]
-cljs꞉cljs-snake.snake꞉> 
-[{:x 1, :y 1} {:x 2, :y 2}]
-cljs꞉cljs-snake.snake꞉> 
-:repl/exception!
-; 
-; Execution error (Error) at (<cljs repl>:1).
-No item 1 in vector of length 1
-cljs꞉cljs-snake.snake꞉> 
-[{:x 2, :y 2} [{:x 1, :y 1}]]
-cljs꞉cljs-snake.snake꞉> 
-({:x 2, :y 2} {:x 1, :y 1})
-cljs꞉cljs-snake.snake꞉> 
-#'cljs-snake.snake/test-snake
-cljs꞉cljs-snake.snake꞉> 
-({:x 2, :y 2} {:x 1, :y 1})
-cljs꞉cljs-snake.snake꞉> 
-({:x 2, :y 2} {:x 1, :y 1})
-cljs꞉cljs-snake.snake꞉> 
-({:x 2, :y 2})
-cljs꞉cljs-snake.snake꞉> 
-(5)
-cljs꞉cljs-snake.snake꞉> 
-#'cljs-snake.snake/state_
-cljs꞉cljs-snake.snake꞉> 
-({:x 1, :y 1})
-cljs꞉cljs-snake.snake꞉> 
-({:x 1, :y 1})
-cljs꞉cljs-snake.snake꞉> 
-({:x 1, :y 1})
-cljs꞉cljs-snake.snake꞉> 
-({:x 1, :y 1})
-cljs꞉cljs-snake.snake꞉> 
-({:x 1, :y 1})
-cljs꞉cljs-snake.snake꞉> 
-#'cljs-snake.snake/update-snake
-cljs꞉cljs-snake.snake꞉> 
-({:x 2, :y 1})
-cljs꞉cljs-snake.snake꞉> 
-({:x 2, :y 1})
-cljs꞉cljs-snake.snake꞉> 
-({:x 2, :y 1})
-cljs꞉cljs-snake.snake꞉> 
-#'cljs-snake.snake/update-moves
-cljs꞉cljs-snake.snake꞉> 
-:repl/exception!
-; 
-; Execution error (Error) at (<cljs repl>:1).
-Assert failed: (number? n)
-cljs꞉cljs-snake.snake꞉> 
-#'cljs-snake.snake/update-moves
-cljs꞉cljs-snake.snake꞉> 
+clj꞉cljs.user꞉> 
+#'cljs-snake.state/is-move-valid?
+cljs꞉cljs-snake.state꞉> 
+#'cljs-snake.state/state_
+cljs꞉cljs-snake.state꞉> 
+{:x 1, :y 0}
+cljs꞉cljs-snake.state꞉> 
+#'cljs-snake.state/is-move-valid?
+cljs꞉cljs-snake.state꞉> 
+[1 0]
+cljs꞉cljs-snake.state꞉> 
+[1 0]
+cljs꞉cljs-snake.state꞉> 
+#'cljs-snake.state/is-move-valid?
+cljs꞉cljs-snake.state꞉> 
+true
+cljs꞉cljs-snake.state꞉> 
+true
+cljs꞉cljs-snake.state꞉> 
+true
+cljs꞉cljs-snake.state꞉> 
+true
+cljs꞉cljs-snake.state꞉> 
+#'cljs-snake.state/is-move-valid?
+cljs꞉cljs-snake.state꞉> 
+false
+cljs꞉cljs-snake.state꞉> 
+false
+cljs꞉cljs-snake.state꞉> 
+false
+cljs꞉cljs-snake.state꞉> 
+false
+cljs꞉cljs-snake.state꞉> 
+false
+cljs꞉cljs-snake.state꞉> 
+false
+cljs꞉cljs-snake.state꞉> 
+false
+cljs꞉cljs-snake.state꞉> 
+#'cljs-snake.state/is-move-valid?
+cljs꞉cljs-snake.state꞉> 
 2
-cljs꞉cljs-snake.snake꞉> 
+cljs꞉cljs-snake.state꞉> 
 2
-cljs꞉cljs-snake.snake꞉> 
+cljs꞉cljs-snake.state꞉> 
 2
-cljs꞉cljs-snake.snake꞉> 
-#'cljs-snake.snake/state_
-cljs꞉cljs-snake.snake꞉> 
+cljs꞉cljs-snake.state꞉> 
+2
+cljs꞉cljs-snake.state꞉> 
+#'cljs-snake.state/is-move-valid?
+cljs꞉cljs-snake.state꞉> 
+-1
+cljs꞉cljs-snake.state꞉> 
+#'cljs-snake.state/is-move-valid?
+cljs꞉cljs-snake.state꞉> 
 1
-cljs꞉cljs-snake.snake꞉> 
-1
-cljs꞉cljs-snake.snake꞉> 
-1
-cljs꞉cljs-snake.snake꞉> 
-#'cljs-snake.snake/update-moves
-cljs꞉cljs-snake.snake꞉> 
-[{:x 1, :y 0}]
-cljs꞉cljs-snake.snake꞉> 
-[{:x 1, :y 0}]
-cljs꞉cljs-snake.snake꞉> 
-[{:x 1, :y 0}]
-cljs꞉cljs-snake.snake꞉> 
-[{:x 1, :y 0}]
-cljs꞉cljs-snake.snake꞉> 
-[{:x 1, :y 0}]
-cljs꞉cljs-snake.snake꞉> 
-:repl/exception!
-; 
-; Execution error (Error) at (<cljs repl>:1).
-Assert failed: (number? n)
-cljs꞉cljs-snake.snake꞉> 
-{:apple {:x 7, :y 2}, :snake ({:x 3, :y 1}), :moves [{:x 1, :y 0} {:x 0, :y 1}]}
-cljs꞉cljs-snake.snake꞉> 
-[{:x 1, :y 0} {:x 0, :y 1}]
-cljs꞉cljs-snake.snake꞉> 
-:repl/exception!
-; 
-; Execution error (Error) at (<cljs repl>:1).
-Assert failed: (number? n)
-cljs꞉cljs-snake.snake꞉> 
-#'cljs-snake.snake/state_
-cljs꞉cljs-snake.snake꞉> 
-[{:x 1, :y 0} {:x 0, :y 1}]
-cljs꞉cljs-snake.snake꞉> 
-#'cljs-snake.snake/state_
-cljs꞉cljs-snake.snake꞉> 
-({:x 1, :y 0})
-cljs꞉cljs-snake.snake꞉> 
-#'cljs-snake.snake/state_
-cljs꞉cljs-snake.snake꞉> 
-({:x 1, :y 0} {:x 0, :y 1} {:x 0, :y 1} {:x 0, :y 1} {:x 0, :y 1} {:x 0, :y 1} {:x 0, :y -1} {:x 0, :y -1} {:x -1, :y 0} {:x 0, :y 1} {:x 0, :y 1} {:x 0, :y 1} {:x 0, :y 1})
-cljs꞉cljs-snake.snake꞉> 
-nil
-; ------ WARNING - :undeclared-var -----------------------------------------------
-;  Resource: <eval>:1:7
- Use of undeclared Var cljs-snake.snake/moves
---------------------------------------------------------------------------------
-
-cljs꞉cljs-snake.snake꞉> 
-({:x 1, :y 0} {:x 0, :y 1})
-cljs꞉cljs-snake.snake꞉> 
-:repl/exception!
-; 
-; Execution error (Error) at (<cljs repl>:1).
-Assert failed: (number? n)
-cljs꞉cljs-snake.snake꞉> 
-:repl/exception!
-; 
-; Execution error (Error) at (<cljs repl>:1).
-Assert failed: (number? n)
-cljs꞉cljs-snake.snake꞉> 
-(1 1)
-cljs꞉cljs-snake.snake꞉> 
-(2 3)
-cljs꞉cljs-snake.snake꞉> 
+cljs꞉cljs-snake.state꞉> 
+#'cljs-snake.state/is-move-valid?
+cljs꞉cljs-snake.state꞉> 
+2
+cljs꞉cljs-snake.state꞉> 
+#'cljs-snake.state/is-move-valid?
+cljs꞉cljs-snake.state꞉> 
+-2
+cljs꞉cljs-snake.state꞉> 
+#'cljs-snake.state/is-move-valid?
+cljs꞉cljs-snake.state꞉> 
+2
+cljs꞉cljs-snake.state꞉> 
+#'cljs-snake.state/is-move-valid?
+cljs꞉cljs-snake.state꞉> 
+0
+cljs꞉cljs-snake.state꞉> 
+#'cljs-snake.state/is-move-valid?
+cljs꞉cljs-snake.state꞉> 
+true
+cljs꞉cljs-snake.state꞉> 
+#'cljs-snake.state/is-move-valid?
+cljs꞉cljs-snake.state꞉> 
+false
+cljs꞉cljs-snake.state꞉> 
+false
+cljs꞉cljs-snake.state꞉> 
+true
+cljs꞉cljs-snake.state꞉> 

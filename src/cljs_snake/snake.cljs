@@ -1,20 +1,14 @@
 (ns cljs-snake.snake
   (:require
+   [cljs-snake.attributes :refer [attributes]]
+   [cljs-snake.state :refer [state_ register-move compute-next-state]]
    [cljs-snake.utils :refer [setup-canvas]]))
 
-(def attributes {:width 600
-                 :height 600
-                 :col 20
-                 :row 20
-                 :id "snake-canvas"})
 
 (def theme {:bg-color "#232323"
             :snake-color "green"
             :apple-color "red"})
 
-(def state_ (atom {:apple {:x 7 :y 2}
-                   :snake `({:x 1 :y 1})
-                   :moves `({:x 1 :y 0})}))
 
 (def ctx (setup-canvas "app" attributes))
 
@@ -22,42 +16,6 @@
   (.round js/Math (* x (/ (:width attributes) (:col attributes)))))
 (defn scale-y [y]
   (.round js/Math (* y (/ (:height attributes) (:row attributes)))))
-
-(def test-snake `({:x 1 :y 1}))
-
-(concat [{:x 2 :y 2}] test-snake)
-
-
-(->>
- test-snake
- (concat [{:x 2 :y 2}])
- (drop-last))
-
-(defn update-apple [{apple :apple}] apple)
-
-(defn update-snake [{snake :snake moves :moves}]
-  (let [move (first moves)
-        current-head (first snake)
-        new-head {:x (+ (:x move) (:x current-head))  
-                  :y (+ (:y move) (:y current-head))}]
-    (->>
-     snake
-     (concat (list new-head))
-     (drop-last))))
-
-
-(defn update-moves [{moves :moves}]
-  (if (> (count moves) 1)
-    (drop 1 moves)
-    moves))
-
-(defn compute-next-state [old-state]
-  {:apple (update-apple old-state)
-   :snake (update-snake old-state)
-   :moves (update-moves old-state)})
-
-(defn register-move [move]
-  (swap! state_ update-in [:moves] concat (list move)))
 
 
 (defn draw []
@@ -88,17 +46,13 @@
 
 (defn step [t1]
   (fn [t2]
-    (if (> (- t2 t1) 100)
+    (if (> (- t2 t1) 1000)
       (do
         (swap! state_ compute-next-state)
         (draw)
         (.requestAnimationFrame js/window (step t2)))
       (.requestAnimationFrame js/window (step t1)))))
 
-(def directions {:NORTH {:x 0 :y -1}
-                 :SOUTH {:x 0 :y 1}
-                 :EAST {:x 1 :y 0}
-                 :WEST {:x -1 :y 0}})
 
 (.addEventListener
  js/window
@@ -106,10 +60,14 @@
  (fn [event]
    (let [keyCode (.-keyCode event)]
      (cond
-       (= keyCode 38) (register-move (:NORTH directions))
-       (= keyCode 40) (register-move (:SOUTH directions))
-       (= keyCode 39) (register-move (:EAST directions))
-       (= keyCode 37) (register-move (:WEST directions))))))
+       ;; UP
+       (= keyCode 38) (register-move {:x 0 :y -1})
+       ;; DOWN
+       (= keyCode 40) (register-move {:x 0 :y 1})
+       ;; RIGHT
+       (= keyCode 39) (register-move {:x 1 :y 0})
+       ;; LEFT
+       (= keyCode 37) (register-move {:x -1 :y 0})))))
 
 
 (defn run-game []
