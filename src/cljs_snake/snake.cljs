@@ -35,7 +35,6 @@
 
   ;; draw apple
     (set! (.-fillStyle ctx) (:apple-color theme))
-    (println apple)
     (.fillRect ctx
                (scale-x (:x apple))
                (scale-y (:y apple))
@@ -77,5 +76,4 @@
 
 
 (defn run-game []
-  (println "Running the game")
   ((step 0) 0))
